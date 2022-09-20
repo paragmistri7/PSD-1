@@ -1,0 +1,94 @@
+* {
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: rgba(0, 255, 0, 0.815);
+}
+
+
+
+header {
+    height: 100px;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 40px;
+    align-items: center;
+    background-color: orangered;
+
+}
+
+h2 {
+    font-size: 60px;
+    font-weight: 700;
+    color: aliceblue;
+}
+
+ul li  {
+    display: inline-block;
+    text-align: center;
+}
+ul li :hover{
+    background-color: black;
+}
+
+a {
+    font-size: 25px;
+    color: aliceblue;
+    text-decoration: none;
+    text-transform: capitalize;
+padding: 10px 25px;
+border-radius: 50px;
+}
+
+#bar{
+    display: none;
+}
+#click{
+    display: none;
+}
+
+
+
+
+
+@media (max-width:1000px) {
+    .container {width: 100%;
+  }
+
+    header {
+        width: 100%;
+    }
+    ul {
+        display: block;
+        position: fixed;
+        top: 100px;
+        left: -100%;
+        width: 30%;
+        height: 100vh;
+        background-color: rgb(14, 35, 224);
+        color: rgb(241, 231, 231);
+        cursor: pointer;
+        text-align: center;
+        transition: all 0.7s ease; 
+       
+    }
+    ul li{
+        display: block; padding: 15px 0;
+    }
+    #click:checked ~ ul{
+        left: 0%;
+    }
+    #click:checked ~ #bar i::before{
+        content: "\f00d";
+       
+    }
+    #bar{display: block;
+    color: aliceblue;
+font-size: 45px;}
+
+
+
+}
